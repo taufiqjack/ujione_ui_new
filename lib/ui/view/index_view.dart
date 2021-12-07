@@ -254,7 +254,7 @@ class _IndexViewState extends State<IndexView> {
                                     child: Column(
                                       children: [
                                         Image.asset(
-                                          'assets/images/english_course.png',
+                                          'assets/images/icon_ilustrasi_mapel_bhs_indo.png',
                                           height: 100,
                                           width: 150,
                                         ),
@@ -349,7 +349,7 @@ class _IndexViewState extends State<IndexView> {
                                     child: Column(
                                       children: [
                                         Image.asset(
-                                          'assets/images/islamic_course.png',
+                                          'assets/images/icon_ilustrasi_mapel_kimia.png',
                                           fit: BoxFit.fill,
                                           width: 150,
                                           height: 100,
@@ -478,6 +478,9 @@ class _IndexViewState extends State<IndexView> {
                       child: Column(
                         children: [
                           Card(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
                             color: const Color(0xFFE8F7EF),
                             elevation: 0,
                             child: ListTile(
@@ -538,36 +541,42 @@ class _IndexViewState extends State<IndexView> {
                                   ),
                                 ],
                               ),
-                              trailing: SingleChildScrollView(
-                                physics: const NeverScrollableScrollPhysics(),
+                              trailing: Expanded(
+                                flex: 1,
                                 child: Column(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
                                   children: [
-                                    const Text(
-                                      '10:30 - 12:00',
-                                      style: TextStyle(
-                                        fontSize: 12,
+                                    const Expanded(
+                                      flex: 1,
+                                      child: Text(
+                                        '10:30 - 12:00',
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                        ),
                                       ),
                                     ),
                                     const SizedBox(
                                       height: 5,
                                     ),
-                                    TextButton(
-                                      onPressed: () {},
-                                      child: const Text(
-                                        'Lanjut',
-                                        style: TextStyle(
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.w700,
+                                    Expanded(
+                                      flex: 2,
+                                      child: TextButton(
+                                        onPressed: () {},
+                                        child: const Text(
+                                          'Lanjut',
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.w700,
+                                          ),
                                         ),
+                                        style: ButtonStyle(
+                                            backgroundColor:
+                                                MaterialStateProperty.all(
+                                                    const Color(0xFFFFC21C)),
+                                            fixedSize:
+                                                MaterialStateProperty.all(
+                                                    const Size(70, 8))),
                                       ),
-                                      style: ButtonStyle(
-                                          backgroundColor:
-                                              MaterialStateProperty.all(
-                                                  const Color(0xFFFFC21C)),
-                                          fixedSize: MaterialStateProperty.all(
-                                              const Size(70, 5))),
                                     ),
                                   ],
                                 ),
@@ -575,6 +584,9 @@ class _IndexViewState extends State<IndexView> {
                             ),
                           ),
                           Card(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
                             color: const Color(0xFFE8F7EF),
                             elevation: 0,
                             child: ListTile(
@@ -586,7 +598,7 @@ class _IndexViewState extends State<IndexView> {
                                 height: 48,
                                 width: 48,
                                 child: Image.asset(
-                                  'assets/images/icon_mapel_bahasa_indonesia.png',
+                                  'assets/images/icon_mapel_biologi.png',
                                   width: 24,
                                   height: 32,
                                 ),
@@ -635,22 +647,22 @@ class _IndexViewState extends State<IndexView> {
                                   ),
                                 ],
                               ),
-                              trailing: SingleChildScrollView(
-                                physics: const NeverScrollableScrollPhysics(),
-                                child: Column(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  children: [
-                                    const Text(
+                              trailing: Column(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  const Expanded(
+                                    flex: 1,
+                                    child: Text(
                                       '10:30 - 12:00',
                                       style: TextStyle(
                                         fontSize: 12,
                                       ),
                                     ),
-                                    const SizedBox(
-                                      height: 5,
-                                    ),
-                                    TextButton(
+                                  ),
+                                  Expanded(
+                                    flex: 2,
+                                    child: TextButton(
                                       onPressed: () {},
                                       child: const Text(
                                         'Belum tersedia',
@@ -665,26 +677,29 @@ class _IndexViewState extends State<IndexView> {
                                               MaterialStateProperty.all(
                                                   const Color(0xFFE7E7E7)),
                                           fixedSize: MaterialStateProperty.all(
-                                              const Size(70, 5))),
+                                              const Size(50, 5))),
                                     ),
-                                  ],
-                                ),
+                                  ),
+                                ],
                               ),
                             ),
                           ),
                           Card(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
                             color: const Color(0xFFE8F7EF),
                             elevation: 0,
                             child: ListTile(
                               leading: Container(
                                 decoration: const BoxDecoration(
-                                    color: Color(0xFFA4DFBF),
+                                    color: Color(0xFFB3CAFF),
                                     borderRadius:
                                         BorderRadius.all(Radius.circular(3))),
                                 height: 48,
                                 width: 48,
                                 child: Image.asset(
-                                  'assets/images/icon_mapel_bahasa_indonesia.png',
+                                  'assets/images/icon_mapel_bahasa_inggris.png',
                                   width: 24,
                                   height: 32,
                                 ),
@@ -706,7 +721,7 @@ class _IndexViewState extends State<IndexView> {
                                     width: 5,
                                   ),
                                   const Text(
-                                    'Ujian',
+                                    'Tugas',
                                     style: TextStyle(
                                         fontSize: 12, color: Color(0xFFA4A4A4)),
                                   ),
@@ -733,22 +748,24 @@ class _IndexViewState extends State<IndexView> {
                                   ),
                                 ],
                               ),
-                              trailing: SingleChildScrollView(
-                                physics: const NeverScrollableScrollPhysics(),
-                                child: Column(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  children: [
-                                    const Text(
+                              trailing: Column(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  const Expanded(
+                                    flex: 1,
+                                    child: Text(
                                       '10:30 - 12:00',
                                       style: TextStyle(
                                         fontSize: 12,
                                       ),
                                     ),
-                                    const SizedBox(
-                                      height: 5,
-                                    ),
-                                    TextButton(
+                                  ),
+                                  const SizedBox(
+                                    height: 5,
+                                  ),
+                                  Expanded(
+                                    flex: 2,
+                                    child: TextButton(
                                       onPressed: () {},
                                       child: const Text(
                                         'Ambil',
@@ -765,8 +782,110 @@ class _IndexViewState extends State<IndexView> {
                                           fixedSize: MaterialStateProperty.all(
                                               const Size(70, 5))),
                                     ),
-                                  ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          Card(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            color: const Color(0xFFE8F7EF),
+                            elevation: 0,
+                            child: ListTile(
+                              leading: Container(
+                                decoration: const BoxDecoration(
+                                    color: Color(0xFFFFE49A),
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(3))),
+                                height: 48,
+                                width: 48,
+                                child: Image.asset(
+                                  'assets/images/icon_mapel_fisika.png',
+                                  width: 24,
+                                  height: 32,
                                 ),
+                              ),
+                              title: const Text(
+                                'Fisika Dasar 1',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                              subtitle: Row(
+                                children: [
+                                  Image.asset(
+                                    'assets/images/icon_notebook.png',
+                                    height: 10,
+                                    width: 10,
+                                  ),
+                                  const SizedBox(
+                                    width: 5,
+                                  ),
+                                  const Text(
+                                    'Kuis',
+                                    style: TextStyle(
+                                        fontSize: 12, color: Color(0xFFA4A4A4)),
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Row(
+                                    children: [
+                                      Image.asset(
+                                        'assets/images/icon_date.png',
+                                        height: 10,
+                                        width: 10,
+                                      ),
+                                      const SizedBox(
+                                        width: 5,
+                                      ),
+                                      const Text(
+                                        '10-12-2021',
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                              trailing: Column(
+                                children: [
+                                  const Expanded(
+                                    flex: 1,
+                                    child: Text(
+                                      '10:30 - 12:00',
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 5,
+                                  ),
+                                  Expanded(
+                                    flex: 2,
+                                    child: TextButton(
+                                      onPressed: () {},
+                                      child: const Text(
+                                        'Selesai',
+                                        style: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.w700,
+                                          fontSize: 12,
+                                        ),
+                                      ),
+                                      style: ButtonStyle(
+                                          backgroundColor:
+                                              MaterialStateProperty.all(
+                                                  const Color(0xFFE7E7E7)),
+                                          fixedSize: MaterialStateProperty.all(
+                                              const Size(72, 5))),
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
                           ),
@@ -855,20 +974,34 @@ class _IndexViewState extends State<IndexView> {
                                   const SizedBox(
                                     height: 10,
                                   ),
-                                  const Text(
-                                    'Jangan lupa kekerjakan tugas halaman 50',
+                                  const Padding(
+                                    padding: EdgeInsets.only(
+                                      right: 5,
+                                      left: 5,
+                                    ),
+                                    child: Text(
+                                      'Jangan lupa kekerjakan tugas halaman 50',
+                                    ),
                                   ),
                                   const SizedBox(
                                     height: 10,
                                   ),
                                   Row(
                                     mainAxisAlignment:
-                                        MainAxisAlignment.spaceAround,
+                                        MainAxisAlignment.spaceBetween,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
                                     children: [
+                                      const SizedBox(
+                                        width: 10,
+                                      ),
                                       const Text(
                                         '1 menit yang lalu',
                                         style:
                                             TextStyle(color: Color(0xFFC8C8C8)),
+                                      ),
+                                      const SizedBox(
+                                        width: 70,
                                       ),
                                       TextButton(
                                         child: const Text(
@@ -935,8 +1068,11 @@ class _IndexViewState extends State<IndexView> {
                                   const SizedBox(
                                     height: 10,
                                   ),
-                                  const Text(
-                                    'Jangan lupa kekerjakan tugas halaman 50',
+                                  const Padding(
+                                    padding: EdgeInsets.only(right: 5, left: 5),
+                                    child: Text(
+                                      'Jangan lupa kekerjakan tugas halaman 50',
+                                    ),
                                   ),
                                   const SizedBox(
                                     height: 10,
@@ -945,10 +1081,16 @@ class _IndexViewState extends State<IndexView> {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: [
+                                      const SizedBox(
+                                        width: 5,
+                                      ),
                                       const Text(
                                         '1 menit yang lalu',
                                         style:
                                             TextStyle(color: Color(0xFFC8C8C8)),
+                                      ),
+                                      const SizedBox(
+                                        width: 70,
                                       ),
                                       TextButton(
                                         child: const Text(

@@ -207,7 +207,10 @@ class _IndexViewState extends State<IndexView> {
                       height: 24,
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 24, right: 24),
+                      padding: const EdgeInsets.only(
+                        left: 24,
+                        right: 24,
+                      ),
                       child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -246,193 +249,281 @@ class _IndexViewState extends State<IndexView> {
                             scrollDirection: Axis.horizontal,
                             child: Row(
                               children: [
-                                SizedBox(
-                                  height: 200,
-                                  child: Card(
-                                    elevation: 0,
-                                    semanticContainer: true,
-                                    child: Column(
-                                      children: [
-                                        Image.asset(
-                                          'assets/images/icon_ilustrasi_mapel_bhs_indo.png',
-                                          height: 100,
-                                          width: 150,
-                                        ),
-                                        const SizedBox(
-                                          height: 10,
-                                        ),
-                                        Row(
+                                Stack(
+                                  children: [
+                                    SizedBox(
+                                      width: 200,
+                                      height: 220,
+                                      child: Card(
+                                        color: const Color(0xFFE8F7EF),
+                                        elevation: 2,
+                                        semanticContainer: true,
+                                        child: Column(
                                           children: [
-                                            Column(
-                                              children: [
-                                                const Text(
-                                                  'Bahasa Indonesia',
-                                                  style: TextStyle(
-                                                    fontSize: 12,
-                                                    fontWeight: FontWeight.w400,
-                                                    color: Color(0xFF60C78F),
-                                                  ),
-                                                ),
-                                                const SizedBox(
-                                                  height: 5,
-                                                ),
-                                                const Text(
-                                                  'Bahasa Indonesia\nDasar 1',
-                                                  style: TextStyle(
-                                                    fontSize: 12,
-                                                    fontWeight: FontWeight.w700,
-                                                  ),
-                                                ),
-                                                const SizedBox(
-                                                  height: 12,
-                                                ),
-                                                Row(
-                                                  children: [
-                                                    Image.asset(
-                                                        'assets/images/icon_book.png'),
-                                                    const SizedBox(
-                                                      width: 5,
-                                                    ),
-                                                    const Text(
-                                                      '1 - 10',
-                                                      style: TextStyle(
-                                                          fontSize: 12,
-                                                          color: Color(
-                                                              0xFFA4A4A4)),
-                                                    ),
-                                                    const SizedBox(
-                                                      width: 5,
-                                                    ),
-                                                    Image.asset(
-                                                      'assets/images/icon_time.png',
-                                                    ),
-                                                    const SizedBox(
-                                                      width: 5,
-                                                    ),
-                                                    const Text(
-                                                      '10:30 - 12:00',
-                                                      style: TextStyle(
-                                                          fontSize: 12,
-                                                          color: Color(
-                                                              0xFFA4A4A4)),
-                                                    )
-                                                  ],
-                                                )
-                                              ],
+                                            Image.asset(
+                                              'assets/images/icon_ilustrasi_mapel_bhs_indo.png',
+                                              fit: BoxFit.cover,
                                             ),
                                             const SizedBox(
-                                              width: 20,
+                                              height: 10,
                                             ),
-                                            const Icon(
-                                              Icons.favorite,
-                                              color: Colors.red,
-                                            )
                                           ],
                                         ),
-                                      ],
-                                    ),
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(
-                                        10.0,
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(
+                                            10.0,
+                                          ),
+                                        ),
                                       ),
                                     ),
-                                  ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                        top: 105,
+                                        left: 4,
+                                      ),
+                                      child: Container(
+                                        decoration: const BoxDecoration(
+                                            color: Colors.white,
+                                            boxShadow: [
+                                              BoxShadow(
+                                                  color: Colors.black54,
+                                                  blurRadius: 2,
+                                                  offset: Offset(
+                                                    2,
+                                                    2,
+                                                  ))
+                                            ],
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(10))),
+                                        height: 110,
+                                        width: 195,
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                left: 5,
+                                                top: 5,
+                                              ),
+                                              child: Column(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.start,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: [
+                                                  const Text(
+                                                    'Bahasa Indonesia',
+                                                    style: TextStyle(
+                                                      fontSize: 12,
+                                                      fontWeight:
+                                                          FontWeight.w400,
+                                                      color: Color(0xFF60C78F),
+                                                    ),
+                                                  ),
+                                                  const SizedBox(
+                                                    height: 5,
+                                                  ),
+                                                  const Text(
+                                                    'Bahasa Indonesia\nDasar 1',
+                                                    style: TextStyle(
+                                                      fontSize: 12,
+                                                      fontWeight:
+                                                          FontWeight.w700,
+                                                    ),
+                                                  ),
+                                                  const SizedBox(
+                                                    height: 12,
+                                                  ),
+                                                  Row(
+                                                    children: [
+                                                      Image.asset(
+                                                          'assets/images/icon_book.png'),
+                                                      const SizedBox(
+                                                        width: 5,
+                                                      ),
+                                                      const Text(
+                                                        '1 - 10',
+                                                        style: TextStyle(
+                                                            fontSize: 12,
+                                                            color: Color(
+                                                                0xFFA4A4A4)),
+                                                      ),
+                                                      const SizedBox(
+                                                        width: 5,
+                                                      ),
+                                                      Image.asset(
+                                                        'assets/images/icon_time.png',
+                                                      ),
+                                                      const SizedBox(
+                                                        width: 5,
+                                                      ),
+                                                      const Text(
+                                                        '10:30 - 12:00',
+                                                        style: TextStyle(
+                                                            fontSize: 12,
+                                                            color: Color(
+                                                                0xFFA4A4A4)),
+                                                      )
+                                                    ],
+                                                  )
+                                                ],
+                                              ),
+                                            ),
+                                            const Padding(
+                                              padding: EdgeInsets.only(
+                                                top: 5,
+                                              ),
+                                              child: Icon(
+                                                Icons.favorite,
+                                                color: Colors.red,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
                                 const SizedBox(
                                   width: 20,
                                 ),
-                                SizedBox(
-                                  height: 200,
-                                  child: Card(
-                                    elevation: 0,
-                                    semanticContainer: true,
-                                    child: Column(
-                                      children: [
-                                        Image.asset(
-                                          'assets/images/icon_ilustrasi_mapel_kimia.png',
-                                          fit: BoxFit.fill,
-                                          width: 150,
-                                          height: 100,
-                                        ),
-                                        const SizedBox(
-                                          height: 10,
-                                        ),
-                                        Row(
+                                Stack(
+                                  children: [
+                                    SizedBox(
+                                      width: 200,
+                                      height: 220,
+                                      child: Card(
+                                        color: const Color(0xFFE8F7EF),
+                                        elevation: 2,
+                                        semanticContainer: true,
+                                        child: Column(
                                           children: [
-                                            Column(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                const Text(
-                                                  'Kimia',
-                                                  style: TextStyle(
-                                                    fontSize: 12,
-                                                    fontWeight: FontWeight.w400,
-                                                    color: Color(0xFF60C78F),
-                                                  ),
-                                                ),
-                                                const SizedBox(
-                                                  height: 5,
-                                                ),
-                                                const Text(
-                                                  'Kimia Dasar 1\n',
-                                                  style: TextStyle(
-                                                    fontSize: 12,
-                                                    fontWeight: FontWeight.w700,
-                                                  ),
-                                                ),
-                                                const SizedBox(
-                                                  height: 12,
-                                                ),
-                                                Row(
-                                                  children: [
-                                                    Image.asset(
-                                                        'assets/images/icon_book.png'),
-                                                    const SizedBox(
-                                                      width: 5,
-                                                    ),
-                                                    const Text(
-                                                      '1 - 10',
-                                                      style: TextStyle(
-                                                          fontSize: 12,
-                                                          color: Color(
-                                                              0xFFA4A4A4)),
-                                                    ),
-                                                    const SizedBox(
-                                                      width: 5,
-                                                    ),
-                                                    Image.asset(
-                                                      'assets/images/icon_time.png',
-                                                    ),
-                                                    const SizedBox(
-                                                      width: 5,
-                                                    ),
-                                                    const Text(
-                                                      '10:30 - 12:00',
-                                                      style: TextStyle(
-                                                          fontSize: 12,
-                                                          color: Color(
-                                                              0xFFA4A4A4)),
-                                                    )
-                                                  ],
-                                                )
-                                              ],
+                                            Image.asset(
+                                              'assets/images/icon_ilustrasi_mapel_kimia.png',
+                                              fit: BoxFit.cover,
                                             ),
                                             const SizedBox(
-                                              width: 20,
+                                              height: 10,
+                                            ),
+                                          ],
+                                        ),
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.circular(
+                                          10.0,
+                                        )),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          top: 105, left: 4),
+                                      child: Container(
+                                        decoration: const BoxDecoration(
+                                            color: Colors.white,
+                                            boxShadow: [
+                                              BoxShadow(
+                                                  color: Colors.black54,
+                                                  blurRadius: 2,
+                                                  offset: Offset(
+                                                    2,
+                                                    2,
+                                                  ))
+                                            ],
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(10))),
+                                        height: 110,
+                                        width: 195,
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                left: 5,
+                                                top: 5,
+                                              ),
+                                              child: Column(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.start,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: [
+                                                  const Text(
+                                                    'Kimia',
+                                                    style: TextStyle(
+                                                      fontSize: 12,
+                                                      fontWeight:
+                                                          FontWeight.w400,
+                                                      color: Color(0xFF60C78F),
+                                                    ),
+                                                  ),
+                                                  const SizedBox(
+                                                    height: 5,
+                                                  ),
+                                                  const Text(
+                                                    'Kimia Dasar 1\n',
+                                                    style: TextStyle(
+                                                      fontSize: 12,
+                                                      fontWeight:
+                                                          FontWeight.w700,
+                                                    ),
+                                                  ),
+                                                  const SizedBox(
+                                                    height: 12,
+                                                  ),
+                                                  Row(
+                                                    children: [
+                                                      Image.asset(
+                                                          'assets/images/icon_book.png'),
+                                                      const SizedBox(
+                                                        width: 5,
+                                                      ),
+                                                      const Text(
+                                                        '1 - 10',
+                                                        style: TextStyle(
+                                                            fontSize: 12,
+                                                            color: Color(
+                                                                0xFFA4A4A4)),
+                                                      ),
+                                                      const SizedBox(
+                                                        width: 5,
+                                                      ),
+                                                      Image.asset(
+                                                        'assets/images/icon_time.png',
+                                                      ),
+                                                      const SizedBox(
+                                                        width: 5,
+                                                      ),
+                                                      const Text(
+                                                        '10:30 - 12:00',
+                                                        style: TextStyle(
+                                                            fontSize: 12,
+                                                            color: Color(
+                                                                0xFFA4A4A4)),
+                                                      )
+                                                    ],
+                                                  )
+                                                ],
+                                              ),
+                                            ),
+                                            const SizedBox(
+                                              width: 5,
                                             ),
                                             const Icon(
                                               Icons.favorite_border,
                                             )
                                           ],
                                         ),
-                                      ],
+                                      ),
                                     ),
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(
-                                      10.0,
-                                    )),
-                                  ),
+                                    const SizedBox(
+                                      height: 10,
+                                    ),
+                                  ],
                                 ),
                               ],
                             ),

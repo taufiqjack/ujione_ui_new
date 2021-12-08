@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -275,18 +276,18 @@ class _HomeViewState extends State<HomeView> {
                                               Radius.circular(10))),
                                       height: 110,
                                       width: 195,
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.start,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Padding(
-                                            padding: const EdgeInsets.only(
-                                              left: 5,
-                                              top: 5,
-                                            ),
-                                            child: Column(
+                                      child: Padding(
+                                        padding: const EdgeInsets.only(
+                                          left: 5,
+                                          top: 16,
+                                        ),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Column(
                                               mainAxisAlignment:
                                                   MainAxisAlignment.start,
                                               crossAxisAlignment:
@@ -304,11 +305,13 @@ class _HomeViewState extends State<HomeView> {
                                                   height: 5,
                                                 ),
                                                 const Text(
-                                                  'Bahasa Indonesia\nDasar 1',
+                                                  'Bahasa Indonesia Dasar 1',
                                                   style: TextStyle(
-                                                    fontSize: 12,
-                                                    fontWeight: FontWeight.w700,
-                                                  ),
+                                                      fontSize: 12,
+                                                      fontWeight:
+                                                          FontWeight.w700,
+                                                      overflow: TextOverflow
+                                                          .ellipsis),
                                                 ),
                                                 const SizedBox(
                                                   height: 12,
@@ -347,17 +350,31 @@ class _HomeViewState extends State<HomeView> {
                                                 )
                                               ],
                                             ),
-                                          ),
-                                          const Padding(
-                                            padding: EdgeInsets.only(
-                                              top: 5,
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                top: 5,
+                                              ),
+                                              child: Expanded(
+                                                child: CircularPercentIndicator(
+                                                  radius: 35.0,
+                                                  lineWidth: 5,
+                                                  animation: true,
+                                                  percent: 30 / 100,
+                                                  progressColor: Colors.green,
+                                                  backgroundColor:
+                                                      const Color(0xFFBAE7CF),
+                                                  center: const Text(
+                                                    '30%',
+                                                    style: TextStyle(
+                                                        color:
+                                                            Color(0xFFA4A4A4),
+                                                        fontSize: 8),
+                                                  ),
+                                                ),
+                                              ),
                                             ),
-                                            child: Icon(
-                                              Icons.favorite,
-                                              color: Colors.red,
-                                            ),
-                                          ),
-                                        ],
+                                          ],
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -411,18 +428,18 @@ class _HomeViewState extends State<HomeView> {
                                               Radius.circular(10))),
                                       height: 110,
                                       width: 195,
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.start,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Padding(
-                                            padding: const EdgeInsets.only(
-                                              left: 5,
-                                              top: 5,
-                                            ),
-                                            child: Column(
+                                      child: Padding(
+                                        padding: const EdgeInsets.only(
+                                          left: 5,
+                                          top: 16,
+                                        ),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Column(
                                               mainAxisAlignment:
                                                   MainAxisAlignment.start,
                                               crossAxisAlignment:
@@ -440,9 +457,11 @@ class _HomeViewState extends State<HomeView> {
                                                   height: 5,
                                                 ),
                                                 const Text(
-                                                  'Kimia Dasar 1\n',
+                                                  'Kimia Dasar 1',
                                                   style: TextStyle(
                                                     fontSize: 12,
+                                                    overflow:
+                                                        TextOverflow.ellipsis,
                                                     fontWeight: FontWeight.w700,
                                                   ),
                                                 ),
@@ -483,22 +502,38 @@ class _HomeViewState extends State<HomeView> {
                                                 )
                                               ],
                                             ),
-                                          ),
-                                          const SizedBox(
-                                            width: 5,
-                                          ),
-                                          const Icon(
-                                            Icons.favorite_border,
-                                          )
-                                        ],
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.only(top: 5),
+                                              child: Expanded(
+                                                child: CircularPercentIndicator(
+                                                  radius: 35.0,
+                                                  lineWidth: 5,
+                                                  animation: true,
+                                                  percent: 60 / 100,
+                                                  progressColor: Colors.green,
+                                                  backgroundColor:
+                                                      const Color(0xFFBAE7CF),
+                                                  center: const Text(
+                                                    '60%',
+                                                    style: TextStyle(
+                                                        color:
+                                                            Color(0xFFA4A4A4),
+                                                        fontSize: 8),
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
                                       ),
                                     ),
                                   ),
-                                  const SizedBox(
-                                    height: 10,
-                                  ),
                                 ],
                               ),
+                              const SizedBox(
+                                width: 10,
+                              )
                             ],
                           ),
                         ),

@@ -1552,6 +1552,6 @@ class _HomeViewState extends State<HomeView> {
         timeInSecForIosWeb: 1,
         fontSize: 12,
         gravity: ToastGravity.BOTTOM,
-        toastLength: Toast.LENGTH_LONG);
+        toastLength: Toast.LENGTH_SHORT);
   }
 }

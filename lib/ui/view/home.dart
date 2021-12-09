@@ -12,6 +12,8 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
+  bool isLOading = false;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -29,64 +31,120 @@ class _HomeViewState extends State<HomeView> {
             height: 150,
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: Row(
-                children: [
-                  CircleAvatar(
-                    child: Image.asset(
-                      'assets/images/icon_default_user.png',
-                    ),
-                    radius: 50.0,
-                    backgroundColor: Colors.transparent,
+              child: Row(children: [
+                CircleAvatar(
+                  child: Image.asset(
+                    'assets/images/icon_default_user.png',
                   ),
-                  const SizedBox(
-                    width: 5,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 50, right: 0, left: 0),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Text(
-                          'Justin Dias',
-                          style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.w700,
-                            color: Colors.white,
-                          ),
+                  radius: 50.0,
+                  backgroundColor: Colors.transparent,
+                ),
+                const SizedBox(
+                  width: 5,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 50, right: 0, left: 0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      Text(
+                        'Justin Dias',
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700,
+                          color: Colors.white,
                         ),
-                        SizedBox(
-                          width: 8,
+                      ),
+                      SizedBox(
+                        width: 8,
+                      ),
+                      Text(
+                        'SMA Negeri 1 Yogyakarta',
+                        style: TextStyle(
+                          color: Colors.white,
                         ),
-                        Text(
-                          'SMA Negeri 1 Yogyakarta',
-                          style: TextStyle(
-                            color: Colors.white,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                      ],
-                    ),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                    ],
                   ),
-                  const SizedBox(
-                    width: 40,
-                  ),
-                  Badge(
-                    badgeContent: const Text(
-                      '2',
-                      style: TextStyle(color: Colors.white),
+                ),
+                const SizedBox(
+                  width: 40,
+                ),
+                GestureDetector(
+                    child: Badge(
+                      badgeContent: const Text(
+                        '2',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      animationType: BadgeAnimationType.slide,
+                      child: Image.asset(
+                        'assets/images/icon_notification.png',
+                        width: 30,
+                        height: 30,
+                      ),
                     ),
-                    animationType: BadgeAnimationType.slide,
-                    child: Image.asset(
-                      'assets/images/icon_notification.png',
-                      width: 30,
-                      height: 30,
-                    ),
-                  ),
-                ],
-              ),
+                    onTap: () {
+                      showGeneralDialog(
+                        barrierLabel: 'label',
+                        barrierDismissible: true,
+                        barrierColor: Colors.black.withOpacity(0.5),
+                        context: context,
+                        pageBuilder: (_, __, ___) {
+                          return Align(
+                            alignment: Alignment.topRight,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              height: 120,
+                              width: 150,
+                              margin: const EdgeInsets.only(
+                                  top: 70, left: 12, right: 35),
+                              child: Material(
+                                type: MaterialType.transparency,
+                                child: Stack(
+                                  alignment: Alignment.center,
+                                  children: [
+                                    Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: const [
+                                        Text('Hallo Everyones!!'),
+                                        Text('ini notifikasi'),
+                                      ],
+                                    ),
+                                    const SizedBox(
+                                      height: 10,
+                                    ),
+                                    Align(
+                                      alignment: Alignment.bottomCenter,
+                                      child: InkWell(
+                                        onTap: () {},
+                                        child: const Text(
+                                          'View All',
+                                          style: TextStyle(
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w700,
+                                              color: Colors.green),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          );
+                        },
+                      );
+                    }),
+              ]),
             ),
           ),
           Padding(
@@ -542,6 +600,29 @@ class _HomeViewState extends State<HomeView> {
                                                                   0xFFA4A4A4)),
                                                         )
                                                       ],
+                                                    ),
+                                                    const SizedBox(
+                                                      height: 10,
+                                                    ),
+                                                    LinearPercentIndicator(
+                                                      animation: true,
+                                                      width: 150,
+                                                      backgroundColor:
+                                                          const Color(
+                                                              0xFFA4DFBF),
+                                                      center: const Text(
+                                                        '60%',
+                                                        style: TextStyle(
+                                                            fontSize: 10,
+                                                            color:
+                                                                Colors.white),
+                                                      ),
+                                                      lineHeight: 12.0,
+                                                      percent: 0.6,
+                                                      animationDuration: 1000,
+                                                      progressColor:
+                                                          const Color(
+                                                              0xFF32B770),
                                                     )
                                                   ],
                                                 ),
@@ -653,7 +734,7 @@ class _HomeViewState extends State<HomeView> {
                                   children: [
                                     Container(
                                       decoration: const BoxDecoration(
-                                          color: Color(0xFFB3CAFF),
+                                          color: Color(0xFFA4DFBF),
                                           borderRadius: BorderRadius.all(
                                               Radius.circular(3))),
                                       height: 48,

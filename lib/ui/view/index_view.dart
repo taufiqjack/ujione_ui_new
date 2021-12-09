@@ -1278,7 +1278,8 @@ class _IndexViewState extends State<IndexView> {
         selectedItemColor: const Color(0xFF32B770),
         onTap: _onItemTapped,
         iconSize: 20,
-        selectedLabelStyle: const TextStyle(fontSize: 12),
+        selectedLabelStyle:
+            const TextStyle(fontSize: 12, fontWeight: FontWeight.w700),
         unselectedLabelStyle: const TextStyle(fontSize: 11),
         type: BottomNavigationBarType.fixed,
       ),

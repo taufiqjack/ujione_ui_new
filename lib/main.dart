@@ -1,4 +1,6 @@
+import 'package:e_learning_uji/ui/view/home.dart';
 import 'package:e_learning_uji/ui/view/index_view.dart';
+import 'package:e_learning_uji/ui/view/register_view.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

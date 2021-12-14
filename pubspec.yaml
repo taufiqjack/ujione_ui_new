@@ -37,6 +37,9 @@ dependencies:
   percent_indicator: ^3.4.0
   badges: ^2.0.2
   fluttertoast: ^8.0.8
+  dio: ^4.0.4
+  flutter_progress_hud: ^2.0.0
+  dotted_border: ^2.0.0+2
 
 dev_dependencies:
   flutter_test:

@@ -15,6 +15,7 @@ class HomeView extends StatefulWidget {
 
 class _HomeViewState extends State<HomeView> {
   bool isLOading = false;
+  bool showBadge = true;
 
   @override
   Widget build(BuildContext context) {
@@ -84,7 +85,8 @@ class _HomeViewState extends State<HomeView> {
                           '2',
                           style: TextStyle(color: Colors.white),
                         ),
-                        animationType: BadgeAnimationType.slide,
+                        showBadge: showBadge,
+                        animationType: BadgeAnimationType.fade,
                         child: Image.asset(
                           'assets/images/icon_notification.png',
                           width: 30,
@@ -138,7 +140,11 @@ class _HomeViewState extends State<HomeView> {
                                       Align(
                                         alignment: Alignment.bottomCenter,
                                         child: InkWell(
-                                          onTap: () {},
+                                          onTap: () {
+                                            setState(() {
+                                              showBadge = false;
+                                            });
+                                          },
                                           child: const Text(
                                             'View All',
                                             style: TextStyle(

@@ -1,3 +1,4 @@
+import 'package:e_learning_uji/ui/view/drag_drop_question.dart';
 import 'package:e_learning_uji/ui/view/home.dart';
 import 'package:e_learning_uji/ui/view/index_view.dart';
 import 'package:e_learning_uji/ui/view/register_view.dart';
@@ -33,7 +34,8 @@ class MyApp extends StatelessWidget {
         ).fontFamily,
       ),
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      home: const IndexView(),
+      // home: const IndexView(),
+      home: const DragDropView(),
     );
   }
 }

@@ -276,23 +276,23 @@ class _DragDropViewState extends State<DragDropView> {
             child: DragTarget<Birds>(
               builder: (context, cd, rj) => Stack(
                 children: [
-                  ReorderableColumn(
-                    onReorder: _onReorder,
-                    children: [
-                      Center(
-                        child: oldTText(text!),
-                      ),
-                      ...birds
-                          .map(
-                            (bird) => DraggableWidget(
-                              bird: bird,
-                            ),
-                          )
-                          .toList()
-                    ],
+                  // ReorderableColumn(
+                  //   onReorder: _onReorder,
+                  //   children: [
+                  Center(
+                    child: oldTText(text!),
                   ),
+                  ...birds
+                      .map(
+                        (bird) => DraggableWidget(
+                          bird: bird,
+                        ),
+                      )
+                      .toList()
                 ],
               ),
+              //   ],
+              // ),
               onWillAccept: (data) => true,
               onAccept: (data) {
                 onAccept(data);

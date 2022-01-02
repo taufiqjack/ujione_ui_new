@@ -1,4 +1,6 @@
+import 'package:e_learning_uji/ui/view/dra_drop_question_lates.dart';
 import 'package:e_learning_uji/ui/view/drag_drop_question.dart';
+import 'package:e_learning_uji/ui/view/drag_drop_question_nw.dart';
 import 'package:e_learning_uji/ui/view/home.dart';
 import 'package:e_learning_uji/ui/view/index_view.dart';
 import 'package:e_learning_uji/ui/view/register_view.dart';
@@ -35,7 +37,7 @@ class MyApp extends StatelessWidget {
       ),
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
       // home: const IndexView(),
-      home: const DragDropView(),
+      home: const DragDropViewLatest(),
     );
   }
 }

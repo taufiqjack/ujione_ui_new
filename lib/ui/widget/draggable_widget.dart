@@ -1,4 +1,4 @@
-import 'package:e_learning_uji/data/data.dart';
+import 'package:e_learning_uji/data/data%20_new.dart';
 import 'package:flutter/material.dart';
 
 class DraggableWidget extends StatelessWidget {

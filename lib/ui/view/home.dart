@@ -2,6 +2,7 @@ import 'package:badges/badges.dart';
 import 'package:e_learning_uji/customs/colorize.dart';
 import 'package:e_learning_uji/ui/view/drag_drop_question.dart';
 import 'package:e_learning_uji/ui/view/drag_drop_question_nw.dart';
+import 'package:e_learning_uji/ui/view/products_view.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
@@ -1150,7 +1151,14 @@ class _HomeViewState extends State<HomeView> {
                                             height: 30,
                                             width: 110,
                                             child: TextButton(
-                                              onPressed: () {},
+                                              onPressed: () {
+                                                Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                      builder: (context) =>
+                                                          const ProductsView(),
+                                                    ));
+                                              },
                                               child: const Text(
                                                 'Ambil',
                                                 style: TextStyle(

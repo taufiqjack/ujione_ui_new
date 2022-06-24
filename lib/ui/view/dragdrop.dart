@@ -1,10 +1,8 @@
-import 'package:drag_and_drop_lists/drag_and_drop_item.dart';
-import 'package:drag_and_drop_lists/drag_and_drop_list.dart';
 import 'package:drag_and_drop_lists/drag_and_drop_lists.dart';
 import 'package:flutter/material.dart';
 
 class DragDrop extends StatefulWidget {
-  DragDrop({Key? key}) : super(key: key);
+  const DragDrop({Key? key}) : super(key: key);
 
   @override
   _DragDropState createState() => _DragDropState();
@@ -68,7 +66,7 @@ class _DragDropState extends State<DragDrop> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('List Drag n Drop'),
+        title: const Text('List Drag n Drop'),
       ),
       body: DragAndDropLists(
         children: _content!,

@@ -10,8 +10,8 @@ class NilaiView extends StatefulWidget {
 class _NilaiViewState extends State<NilaiView> {
   bool onClick = false;
   final List<bool> _onClick = List.generate(4, (index) => false);
-  List<String> _label = ['Ujian', 'Tugas', 'Kuis', 'Total'];
-  List<Color> _color = [
+  final List<String> _label = ['Ujian', 'Tugas', 'Kuis', 'Total'];
+  final List<Color> _color = [
     Colors.transparent,
     Colors.transparent,
     Colors.transparent,

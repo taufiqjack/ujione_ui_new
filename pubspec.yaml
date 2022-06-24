@@ -45,7 +45,7 @@ dependencies:
   drag_and_drop_lists: ^0.3.2+2
   sliding_up_panel: ^2.0.0+1
   reorderables: ^0.4.2
-  cached_network_image: ^3.2.1
+  skeleton_text: ^3.0.0
 
 dev_dependencies:
   flutter_test:

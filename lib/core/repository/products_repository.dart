@@ -1,4 +1,3 @@
-import 'dart:convert';
 
 import 'package:dio/dio.dart';
 import 'package:e_learning_uji/core/constans/api.dart';
@@ -26,5 +25,6 @@ class ProductsRepo extends ChangeNotifier {
     } catch (e) {
       Fluttertoast.showToast(msg: 'Error');
     }
+    return null;
   }
 }

@@ -1,6 +1,5 @@
 import 'package:badges/badges.dart';
 import 'package:e_learning_uji/customs/colorize.dart';
-import 'package:e_learning_uji/ui/view/drag_drop_question.dart';
 import 'package:e_learning_uji/ui/view/drag_drop_question_nw.dart';
 import 'package:e_learning_uji/ui/view/products_view.dart';
 import 'package:flutter/material.dart';

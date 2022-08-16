@@ -39,3 +39,10 @@ class ProductModel {
     return data;
   }
 }
+
+class ProductWithText {
+  final String name;
+  ProductModel? products;
+
+  ProductWithText({required this.name, this.products});
+}

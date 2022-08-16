@@ -46,6 +46,7 @@ dependencies:
   sliding_up_panel: ^2.0.0+1
   reorderables: ^0.4.2
   skeleton_text: ^3.0.0
+  drag_and_drop_flutter: ^0.3.0
 
 dev_dependencies:
   flutter_test:

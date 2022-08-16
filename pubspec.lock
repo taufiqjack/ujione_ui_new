@@ -50,6 +50,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.16.0"
+  cross_file:
+    dependency: transitive
+    description:
+      name: cross_file
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.3.3+1"
   crypto:
     dependency: transitive
     description:
@@ -78,6 +85,27 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.0+2"
+  drag_and_drop_flutter:
+    dependency: "direct main"
+    description:
+      name: drag_and_drop_flutter
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.3.0"
+  drag_and_drop_flutter_platform_interface:
+    dependency: transitive
+    description:
+      name: drag_and_drop_flutter_platform_interface
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.1"
+  drag_and_drop_flutter_web:
+    dependency: transitive
+    description:
+      name: drag_and_drop_flutter_web
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.1"
   drag_and_drop_lists:
     dependency: "direct main"
     description:

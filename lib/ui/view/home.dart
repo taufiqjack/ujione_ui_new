@@ -1,6 +1,7 @@
 import 'package:badges/badges.dart';
 import 'package:e_learning_uji/customs/colorize.dart';
 import 'package:e_learning_uji/ui/view/drag_drop_question_nw.dart';
+import 'package:e_learning_uji/ui/view/itemselect_view.dart';
 import 'package:e_learning_uji/ui/view/products_view.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -729,7 +730,12 @@ class _HomeViewState extends State<HomeView> {
                                 ),
                                 InkWell(
                                   onTap: () {
-                                    _toastMsg();
+                                    // _toastMsg();
+                                    Navigator.pushReplacement(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                ItemSelectView()));
                                   },
                                   child: const Align(
                                     alignment: Alignment.topRight,

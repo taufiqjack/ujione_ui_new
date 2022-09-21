@@ -13,6 +13,7 @@ class _DragDropState extends State<DragDrop> {
 
   @override
   void initState() {
+    super.initState();
     _content = List.generate(2, (index) {
       return DragAndDropList(
         header: Column(

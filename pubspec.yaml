@@ -47,6 +47,9 @@ dependencies:
   reorderables: ^0.4.2
   skeleton_text: ^3.0.0
   drag_and_drop_flutter: ^0.3.0
+  flutter_multi_select_items: ^0.4.2
+  font_awesome_flutter: ^10.1.0
+  octo_image: ^1.0.2
 
 dev_dependencies:
   flutter_test:
